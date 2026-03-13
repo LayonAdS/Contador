@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
         // regra de mudança de cor ao atingir limite de 10
 
-        if(contador >= 10){
+        if(contador >= 20){
+            tvContador.setTextColor(Color.GRAY);
+        }else if(contador >=10){
             tvContador.setTextColor(Color.RED);
         }else{
             tvContador.setTextColor(Color.BLACK);
