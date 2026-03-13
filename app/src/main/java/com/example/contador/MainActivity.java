@@ -1,8 +1,7 @@
 package com.example.contador;
 
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -10,15 +9,24 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    // definior variaveis globais (objetos da tela)
+    private int contador=0;
+    private TextView tvContador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // vincular os componentes xrl com java
+        tvContador = findViewById(R.id.tvContador);
+        Button btnInc = findViewById(R.id.btnIncrementar);
+        Button btnDec = findViewById(R.id.btnDecrementar);
+
+        // eventos de click para inicrementar
+
+
+
         });
     }
 }
